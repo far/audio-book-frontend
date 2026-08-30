@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Dev/test only: the backend runs over plain HTTP on a LAN IP or test
+         host with no TLS yet (see spec/plan.md decisions table). Debug-build
+         scoped so it never ships in a release APK. -->
+    <application android:usesCleartextTraffic="true" />
+</manifest>
