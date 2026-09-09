@@ -1,25 +1,11 @@
-# AI Reader
+# `Audio Book` frontend
 
 Flutter app that renders an EPUB as a readable document and reads it aloud, backed by a FastAPI TTS service.
 
-Tap any paragraph to jump there, or step part-by-part. The sentence being read is highlighted.
-
-| Doc | Contents |
-| --- | --- |
-| [CLAUDE.md](CLAUDE.md) | Architecture conventions |
-| [spec/plan.md](spec/plan.md) | Decisions and ADRs |
-| [spec/tech_doc.md](spec/tech_doc.md) | Product spec |
-| [backend/README.md](backend/README.md) | The service, and enabling **ElevenLabs** |
+Backend is [here](https://github.com/far/audio-book-backend/tree/main)
 
 ## Run
 
-```bash
-# backend — full setup in backend/README.md
-cd backend
-uv sync
-uv run python -m piper.download_voices en_US-lessac-medium --data-dir voices
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
 
 ```bash
 # app — LAN IP for a device or non-macOS simulator; 127.0.0.1 for macOS desktop
